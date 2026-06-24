@@ -193,6 +193,6 @@ if __name__ == "__main__":
         print(json.dumps(schemas[key], indent=2))
 
     if schemas["failed_schemas"]:
-        print(f"\n⚠ Failed schemas: {schemas['failed_schemas']}")
+        print(f"\n Failed schemas: {schemas['failed_schemas']}")
     else:
-        print("\n✅ All 4 schemas generated successfully")
+        print("\n All 4 schemas generated successfully")
