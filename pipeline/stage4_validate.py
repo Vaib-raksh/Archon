@@ -17,12 +17,14 @@ def validate_ui(schemas: dict) -> list:
     ui = schemas.get("ui", {})
     api = schemas.get("api", {})
 
-    api_paths = [e["path"] for e in api.get("endpoints", [])]
+    api_paths = [e["path"] for e in api.get("endpoints", []) if isinstance(e, dict)]
     
     for page in ui.get("pages", []):
         for component in page.get("components", []):
             for action in component.get("actions", []):
-                # Check every UI action maps to a real API endpoint
+                # Guard: skip if action is not a string
+                if not isinstance(action, str):
+                    continue
                 matched = any(action in path for path in api_paths)
                 if not matched:
                     errors.append({
