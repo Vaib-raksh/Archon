@@ -27,21 +27,7 @@ Archon breaks schema generation into discrete stages rather than asking a single
 
 - **Language:** Python
 - **Core:** LLM-based multi-stage pipeline
-- *(Add your specific LLM provider/SDK, e.g. OpenAI API / Anthropic API / open-source model, and any orchestration library used)*
 
-## Getting Started
-
-```bash
-git clone https://github.com/Vaib-raksh/Archon.git
-cd Archon
-pip install -r requirements.txt
-```
-
-```bash
-python main.py --input "your app description here"
-```
-
-> *(Update the commands above to match your actual entry point and CLI arguments.)*
 
 ## Example
 
@@ -69,7 +55,7 @@ A habit tracker app where users can create habits, mark them done daily, and see
 }
 ```
 
-> *(Replace with a real input/output pair from your project.)*
+
 
 ## Project Status
 
